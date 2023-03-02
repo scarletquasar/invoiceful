@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <style>
+            * {
+                font-size: 20px;
+            }
+
+            body {
+                display: flex;
+                justify-content: center;
+            }
+
+            main {
+                display: flex;
+                justify-content: center;
+                width: 90%;
+                border: 1px solid black;
+            }
+
+            main section {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                border: 1px solid red;
+            }
+
+            .information {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .information #title {
+                font-weight: bold;
+                width: 20%;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <section>
+                <div class="information" id="left-information">
+                    <div id="title">From</div>
+                    <div>{from-title}</div>
+                    <div>{from-responsible-person}</div>
+                    <div>{from-address-line-1}</div>
+                    <div>{from-address-line-2}</div>
+                    <div>{from-phone}</div>
+
+                    <br />
+
+                    <div>Issued: <b>{issued-date}</b></div>
+                    <div>Due to: <b>{due-date}</b></div>
+                    
+                    <br />
+
+                    <div><b>{payables-info}</b></div>
+                </div>
+            </section>
+
+            <section>
+                <div class="information" id="right-information">
+                    <div id="title">To</div>
+                    <div>{to-title}</div>
+                    <div>{to-responsible-person}</div>
+                    <div>{to-address-line-1}</div>
+                    <div>{to-address-line-2}</div>
+                    <div>{to-phone}</div>
+
+                    <br />
+
+                    <div><b>Subtotal:</b> {subtotal}</div>
+                    <div><b>Taxes:</b> {taxes}</div>
+                    <div><b>Total:</b> {total}</div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
